@@ -34,7 +34,7 @@ class BackupListView : public CustomListView {
 
         void setupList() override;
         TableViewCell* getListCell(const char* key) override;
-        void loadCell(TableViewCell* cell, unsigned int index) override;
+        void loadCell(TableViewCell* cell, int index) override;
     
     public:
         static BackupListView* create(CCArray* backups, BackupViewLayer*, float width, float height);

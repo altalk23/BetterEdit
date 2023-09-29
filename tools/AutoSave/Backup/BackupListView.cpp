@@ -106,7 +106,7 @@ TableViewCell* BackupListView::getListCell(const char* key) {
     return BackupCell::create(this->m_pBackupLayer, key, { this->m_fWidth, 55.0f });
 }
 
-void BackupListView::loadCell(TableViewCell* cell, unsigned int index) {
+void BackupListView::loadCell(TableViewCell* cell, int index) {
     as<BackupCell*>(cell)->loadFromBackup(
         as<LevelBackup*>(this->m_pEntries->objectAtIndex(index))
     );

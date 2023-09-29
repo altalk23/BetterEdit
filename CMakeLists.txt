@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.14)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_OSX_ARCHITECTURES "x86_64")
+set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
 project(betteredit-v4)
 
@@ -13,7 +14,7 @@ add_library(${PROJECT_NAME} SHARED
     hooks/CustomizeObjectLayer.cpp
     hooks/EditLevelLayer.cpp
     hooks/EditorPauseLayer.cpp
-    # hooks/EditorUI.cpp
+    hooks/EditorUI.cpp
     hooks/freezeFix.cpp
     hooks/HSVWidgetPopup.cpp
     hooks/LevelEditorLayer.cpp
@@ -66,7 +67,7 @@ file(GLOB_RECURSE TOOLS_SOURCE_FILES
     # # tools/Screenshot/*.cpp
     # tools/ScrollWheel/*.cpp
     tools/settings/*.cpp
-    # tools/SliderImprovement/*.cpp
+    tools/SliderImprovement/*.cpp
     tools/VisibilityTab/*.cpp
 )
 
